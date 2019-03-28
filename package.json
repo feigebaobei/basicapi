@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --comilers js:babel-core/register"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,8 @@
     "underscore": "^1.9.1"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
     "chai": "^4.2.0"
   }
 }
