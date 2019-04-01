@@ -20,20 +20,49 @@ it块： 测试用例。表示一个测试单元。是测试的最小单位。�
 
 
 var expect = require('chai').expect
+// import chai from 'chai'
+// let expect = chai.expect
+// var should = require('chai').should
+// import {addNum} from '../temp/index.js'
 
 describe('the code', () => {
   beforeEach(() => {})
   afterEach(() => {})
-  it('something', () => {
+  it('zero', () => {
+    // let something = 1
+    // expect(something).to.exist
+    // expect(addNum(1, 2).to.equal(3))
+  })
+  it('first', () => {
     let something = 1
     expect(something).to.exist
   })
-  it('other something', () => {
+  it('second', () => {
     var other = false
     expect(other).to.equal(false)
+    // expect(others).and.with.at.of.but.does.equal(false)
   })
-  it('other something', () => {
+  it('three', () => {
     var other = false
-    expect(other).to.equal(false)
+    expect(other).equal(false)
+    // should(others).equal(false)
+  })
+  it('fourth', () => {
+    var arr = [1, 2, 3]
+    expect(arr).members([2, 1, 3], 'msg')
+  })
+  it('fourth', () => {
+    var arr = 1
+    expect(arr).ok
+  })
+  it('fourth', () => {
+    function test () {
+      expect(arguments).to.be.arguments
+    }
+    test()
+  })
+  it('fourth', () => {
+    // expect({a: 1, b: 2}).eql({a: 1}) // false
+    expect({a: 1}).eql({a: 1}) // true
   })
 })
